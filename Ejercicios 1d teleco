@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+#include <chrono>
+using namespace std;
+
+// Arreglo para guardar los dos estados
+string estados[2];
+
+void rellenar_estado() {
+    estados[0] = "Pendiente";
+    estados[1] = "Pagado";
+}
+
+void imprimir_Nombre_estado() {
+    for (int i = 0; i < 2; i++) {
+        cout << "Estado: " << estados[i] << endl;
+    }
+}
+
+int main() {
+    cout << "Ejercicio 1 inciso a" << endl;
+
+    rellenar_estado(); // Cargar los estados
+
+    auto inicio = chrono::high_resolution_clock::now(); // Inicio medición
+    imprimir_Nombre_estado();
+    auto fin = chrono::high_resolution_clock::now();    // Fin medición
+
+    auto duracion = chrono::duration_cast<chrono::microseconds>(fin - inicio);
+    
+    cout << "Tiempo de impresión de estados: "
+         << duracion.count() << " microsegundos" << endl;
+
+    return 0;
+}

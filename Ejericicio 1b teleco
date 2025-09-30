@@ -1,5 +1,5 @@
 #include <iostream>
-#include <chrono> // Corregido: <chrono> en lugar de <chronos>
+#include <chrono> 
 using namespace std;
 
 // Arreglo global de precios

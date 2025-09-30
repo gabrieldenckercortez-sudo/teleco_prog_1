@@ -22,24 +22,10 @@ int main() {
     auto duracion2 = chrono::duration_cast<chrono::microseconds>(fin - medio);
 
     // Mostrar tiempos
+    cout << "Ejercicio 1 inciso b "
+         << endl;
     cout << "Tiempo de Carga de Planes: " << duracion1.count() << " microsegundos" << endl;
     cout << "Tiempo de Impresion de Planes: " << duracion2.count() << " microsegundos" << endl;
 
     return 0;
-}
-
-// Cargar precios en el arreglo
-void CargarPlan() {
-    PrecioMinLlamada[0] = 0.2;
-    PrecioMinLlamada[1] = 0.5;
-    PrecioMinLlamada[2] = 0.7;
-    PrecioMinLlamada[3] = 1.0; // corregido
-    PrecioMinLlamada[4] = 1.2;
-}
-
-// Imprimir los precios de los planes
-void imprimirPlan() {
-    for (int i = 0; i < 5; i++) {
-        cout << "Plan [" << i << "]: " << PrecioMinLlamada[i] << " Bs/min" << endl;
-    }
 }

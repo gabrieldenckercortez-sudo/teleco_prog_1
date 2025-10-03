@@ -29,3 +29,19 @@ int main() {
 
     return 0;
 }
+
+// Cargar precios en el arreglo
+void CargarPlan() {
+    PrecioMinLlamada[0] = 0.2;
+    PrecioMinLlamada[1] = 0.5;
+    PrecioMinLlamada[2] = 0.7;
+    PrecioMinLlamada[3] = 1.0; // corregido
+    PrecioMinLlamada[4] = 1.2;
+}
+
+// Imprimir los precios de los planes
+void imprimirPlan() {
+    for (int i = 0; i < 5; i++) {
+        cout << "Plan [" << i << "]: " << PrecioMinLlamada[i] << " Bs/min" << endl;
+    }
+}
